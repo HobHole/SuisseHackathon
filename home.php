@@ -6,18 +6,18 @@
 		</p>
 		<br>
 		<p align="center">
-			<img class="firstRow" onclick = "loadLeftLite(\'houselite\')" src="png/house.png"/>
-			<img class="firstRow" onclick = "loadLeftLite(\'jobsLite\')" src="png/tools.png"/>
-			<img class="firstRow" onclick = "loadLeftLite(\'shopplinglite\')" src="png/price-tag.png"/>
-			<img class="firstRow" src="png/village.png"/>
+			<a class="hovertext" href="#" title="Housing"><img class="firstRow" onclick = "loadLeftLite(\'houselite\')" src="png/house.png"/></a>
+			<a class="hovertext" href="#" title="Jobs"><img class="firstRow" onclick = "loadLeftLite(\'jobsLite\')" src="png/tools.png"/></a>
+			<a class="hovertext" href="#" title="Shopping"><img class="firstRow" onclick = "loadLeftLite(\'shopplinglite\')" src="png/price-tag.png"/></a>
+			<a class="hovertext" href="#" title="Community"><img class="firstRow" onclick = "loadLeftLite(\'communitiesLite\')" src="png/village.png"/></a>
 
 		</p>
 		<br>
 		<p align="center">
-			<img class="secondRow" src="png/magnifying-glass.png"/>
-			<img class="secondRow" src="png/speech-bubbles.png"/>
-			<img class="secondRow" src="png/technology.png"/>
-			<img class="secondRow" src="png/laptop.png"/>
+			<a class="hovertext" href="#" title="Personals"><img class="secondRow" src="png/magnifying-glass.png"/></a>
+			<a class="hovertext" href="#" title="Forums"><img class="secondRow" src="png/speech-bubbles.png"/></a>
+			<a class="hovertext" href="#" title="Services"><img class="secondRow" src="png/technology.png"/></a>
+			<a class="hovertext" href="#" title="Gigs"><img class="secondRow" src="png/laptop.png"/></a>
 
 		</p>';
 ?>
