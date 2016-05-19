@@ -11,6 +11,16 @@ body {
 	background: white;
 	border-bottom: groove;
 }
+
+#mailSlots{
+	margin: auto;
+	width:50%;
+	height:120px;
+	background-size: 50%;
+	background: white;
+	border-bottom: groove;
+}
+
 h1{
 	
 	color: white;

@@ -21,6 +21,10 @@
 		$resultSet[] = $entry;
 	}
 	
+	echo '
+			<h1 align="center"; style="color:black;">Mail</h1>
+		
+		';
 	
 	for ($i = 0; $i < 2; $i++) {
 		$messengerid = $resultSet[$i]['messenger'];
@@ -41,13 +45,17 @@
 			$message = $name.' : '.$body;
 		}
 		
+		
+		
 		$show = $message;
 		echo '
-			<div style = "width:100%; height: 50px;">
+		
+			<div style = "width:50%; height: 80px;" align="center" id="mailSlots">
 				<span style = font-weight:8">RE: '.$subject.'</span>
 				<br>
 				<span>'.$show.'</span>
-				
+				<br>
+				<br>
 			</div>
 		';
 	}
