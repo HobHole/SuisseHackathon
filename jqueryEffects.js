@@ -13,6 +13,20 @@ $(document).ready(function(){
 		$('.backdrop').click(function(){
 			close_box();
 		});
+		
+		$('.midBox').click(function(){
+			$('.backdrop').animate({'opacity':'.50'}, 300, 'linear');
+			$('#midBox').animate({'opacity':'1.00'}, 300, 'linear');
+			$('.backdrop, #midBox').css('display', 'block');
+		});
+
+		$('.close').click(function(){
+			close_box1();
+		});
+
+		$('.backdrop').click(function(){
+			close_box1();
+		});
 
 });
 
@@ -20,6 +34,13 @@ function close_box()
 {
 	$('.backdrop, #box').animate({'opacity':'0'}, 300, 'linear', function(){
 		$('.backdrop, #box').css('display', 'none');
+	});
+}
+
+function close_box1()
+{
+	$('.backdrop, #midBox').animate({'opacity':'0'}, 300, 'linear', function(){
+		$('.backdrop, #midBox').css('display', 'none');
 	});
 }
 

@@ -115,6 +115,25 @@ h1{
 	display:none;
 }
 
+#midBox{
+	position:absolute;
+	top:5%;
+	margin-left: 50%;
+	margin-top: 90px;
+	width:515px;
+	height:50%;
+	background: white;
+	z-index:51;
+	padding:10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow:0px 0px 5px #444444;
+	-webkit-box-shadow:0px 0px 5px #444444;
+	box-shadow:0px 0px 5px #444444;
+	display:none;
+}
+
 .close{
 	float:right;
 	margin-right:6px;

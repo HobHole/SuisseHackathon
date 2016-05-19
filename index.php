@@ -126,6 +126,17 @@
 				request.open("GET", lite+".php", false);
 				request.send();
 			}
+			
+			function loadMidLite(lite) {
+				request.onreadystatechange = function() {
+					if (request.readyState == 4 && request.status == 200) {
+						document.getElementById("midBox").innerHTML=request.responseText;
+					}
+				}
+				request.open("GET", lite+".php", false);
+				request.send();
+			}
+			
 
 		</script>
 	</head>
@@ -136,6 +147,7 @@
 		<div id = "content"></div>
 		<div class = "backdrop"></div>
 		<div id = "box"></div>
+		<div id ="midBox"></div>
 		<span onclick = "send('mail')"> logout </span>
 
 	<script>
