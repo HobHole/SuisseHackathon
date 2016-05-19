@@ -14,7 +14,7 @@
 				<a onclick = "logoff()">Log out</a>
 			  </div>
 			</div>
-			<img onclick = "send(\'mailPage\')" class = "navibutton" id = "email" src = "png/mail.png"/>
+			<img onclick = "send(\'mail\')" class = "navibutton" id = "email" src = "png/mail.png"/>
 			<img onclick = "loadMidLite(\'createPost\')" class = "navibutton midBox" id = "newPost" src = "png/newPost.png"/>
 			';
 	} else {
