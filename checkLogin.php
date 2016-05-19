@@ -19,8 +19,8 @@
 		session_unset();
 		echo '
 			<form style="margin-top:-50px; margin-left:60%;" method="post" onSubmit = "return login()">
-				<a><font face="verdana" color="#0000cd";> Login </font></a> |
-				<a><font face="verdana" color="#0000cd";> Register </font></a>
+				<a><font face="verdana" color="#0000cd;" onclick = "loadMidLite(\'loginPage\')"> Login </font></a> |
+				<a><font face="verdana" color="#0000cd;" onclick = "loadMidLite(\'register\')"> Register </font></a>
 			</br>
 			<input type = "text" name="search" placeholder="Search"></input>
 			</form>';
