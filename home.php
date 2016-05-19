@@ -14,7 +14,7 @@
 		</p>
 		<br>
 		<p align="center">
-			<a class="hovertext" href="#" title="Personals"><img class="secondRow" src="png/magnifying-glass.png"/></a>
+			<a class="hovertext" href="#" title="Group Activites"><img class="secondRow" src="png/sports.png"/></a>
 			<a class="hovertext" href="#" title="Forums"><img class="secondRow" src="png/speech-bubbles.png"/></a>
 			<a class="hovertext" href="#" title="Services"><img class="secondRow" src="png/technology.png"/></a>
 			<a class="hovertext" href="#" title="Gigs"><img class="secondRow" src="png/laptop.png"/></a>
