@@ -18,7 +18,7 @@ h1{
 .logo{
 	margin-left: 350px;
 	margin-top: 25px;
-	left: 500px;
+	margin-left:15%;
 }
 .intro{
 	position: relative;
@@ -77,7 +77,7 @@ h1{
     
 }
 
-#setting, #email {
+#setting, #email, #newPost {
 	height:25px;
 	width:25px;
 }
@@ -118,7 +118,7 @@ h1{
 #midBox{
 	position:absolute;
 	top:5%;
-	margin-left: 50%;
+	margin-left: 35%;
 	margin-top: 90px;
 	width:515px;
 	height:50%;

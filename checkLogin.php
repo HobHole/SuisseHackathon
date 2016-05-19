@@ -15,14 +15,14 @@
 			  </div>
 			</div>
 			<img onclick = "send(\'mailPage\')" class = "navibutton" id = "email" src = "png/mail.png"/>
-			<img onclick = "loadMidLite(\'createPost\')" class = "navibutton" id = "newPost" src = "png/newPost.png"/>
+			<img onclick = "loadMidLite(\'createPost\')" class = "navibutton midBox" id = "newPost" src = "png/newPost.png"/>
 			';
 	} else {
 		session_unset();
 		echo '
 			<form style="margin-top:-50px; margin-left:60%;" method="post" onSubmit = "return login()">
 				<span class = "midBox" onclick = "loadMidLite(\'loginPage\')" style = "font-face:verdana;color:#0000cd;"> Login </span> |
-				<span class = "midBox" onclick = "loadMidLite(\'register\')"><font face="verdana" color="#0000cd;"> Register </font></span>
+				<span class = "midBox" onclick = "loadMidLite(\'register\')" style = font-face:verdana;color:#0000cd;"> Register </span>
 			</br>
 			<input type = "text" name="search" placeholder="Search"></input>
 			</form>';
