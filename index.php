@@ -46,7 +46,7 @@
 			function register() {
 				request.onreadystatechange = function() {
 						if (request.readyState == 4) {
-								document.getElementById("content").innerHTML=request.responseText;						
+								document.getElementById("midBox").innerHTML=request.responseText;						
 						}
 				}
 				var user = document.getElementById("user").value;
@@ -57,7 +57,6 @@
 
 
 				var parameters = "user=" + user + "&pass=" + pass + "&cpass=" + cpass + "&email=" + email + "&cemail=" + cemail;
-				alert(parameters);
 				request.open("POST","registerCheck.php",false);
 				request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 				request.send(parameters);
@@ -78,6 +77,7 @@
                     request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
                     request.send(parameters);
 					checkLogin();
+					close_box1();
                     return false;
             }
 			
@@ -148,7 +148,6 @@
 		<div class = "backdrop"></div>
 		<div id = "box"></div>
 		<div id ="midBox"></div>
-		<span onclick = "send('mail')"> logout </span>
 
 	<script>
 		checkLogin();

@@ -14,13 +14,15 @@
 				<a onclick = "logoff()">Log out</a>
 			  </div>
 			</div>
-			<img onclick = "send(\'mailPage\')" class = "navibutton" id = "email" src = "png/mail.png"/>';
+			<img onclick = "send(\'mailPage\')" class = "navibutton" id = "email" src = "png/mail.png"/>
+			<img onclick = "loadMidLite(\'createPost\')" class = "navibutton" id = "newPost" src = "png/newPost.png"/>
+			';
 	} else {
 		session_unset();
 		echo '
 			<form style="margin-top:-50px; margin-left:60%;" method="post" onSubmit = "return login()">
-				<a><font face="verdana" color="#0000cd;" onclick = "loadMidLite(\'loginPage\')"> Login </font></a> |
-				<a><font face="verdana" color="#0000cd;" onclick = "loadMidLite(\'register\')"> Register </font></a>
+				<span class = "midBox" onclick = "loadMidLite(\'loginPage\')" style = "font-face:verdana;color:#0000cd;"> Login </span> |
+				<span class = "midBox" onclick = "loadMidLite(\'register\')"><font face="verdana" color="#0000cd;"> Register </font></span>
 			</br>
 			<input type = "text" name="search" placeholder="Search"></input>
 			</form>';

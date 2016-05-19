@@ -11,6 +11,7 @@
 	} else {
 		echo '
 			<div style = "text-align:center">
+				<span style = "font-size:20pt;"> Welcome! </span>
 				<form style="margin-top:20px;margin-left:auto;margin-right:auto;" method = "post" onSubmit = "return register();">
 				<span> USERNAME : 
 				</br>
