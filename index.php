@@ -137,8 +137,28 @@
 				request.send();
 			}
 			
-			function setLocation(loc) {
-				document.getElementById("loc").value = loc;
+			function setLocation(value) {
+				document.getElementById("loc").value = value;
+			}
+			
+			function setCategory(value) {
+				document.getElementById("cat").value = value;
+				loadSubCat(value);
+			}
+			function loadSubCat(cat) {
+				request.onreadystatechange = function() {
+					if (request.readyState == 4 && request.status == 200) {
+						document.getElementById("subcat").innerHTML=request.responseText;
+					}
+				}
+				var parameters = "cat="+cat;
+				request.open("POST", "loadSubCat.php", false);
+				request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+				request.send(parameters);
+			}
+			
+			function setSubCat(value) {
+				document.getElementById("scat").value = value;
 			}
 			
 
