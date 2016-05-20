@@ -30,6 +30,10 @@ h1{
 	margin-top: 25px;
 	margin-left:15%;
 }
+
+.logo:hover{
+	cursor:pointer;
+}
 .intro{
 	position: relative;
 	top: 50px;
