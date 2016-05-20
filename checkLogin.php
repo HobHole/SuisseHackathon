@@ -9,8 +9,8 @@
 			<div class = "dropdown" style = "floate:left;">
 				<img class = "navibutton" onmouseover = "rotateDIV()" id = "setting" src="png/setting.png"/>
 				<div class="dropdown-content" style="left:0;">
-					<a href="#">Link 1</a>
-					<a href="#">Link 2</a>
+					<a href="send("viewPostsMade.php")">Post History</a>
+					<a href="#">Watch List</a>
 					<a onclick = "logoff()">Log out</a>
 				  </div>
 			</div>

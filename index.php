@@ -150,6 +150,7 @@
 						document.getElementById("subcat").innerHTML=request.responseText;
 					}
 				}
+				
 				var parameters = "cat="+cat;
 				request.open("POST", "loadSubCat.php", false);
 				request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
