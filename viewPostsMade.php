@@ -69,6 +69,7 @@
 			}
 			echo'
 			</div>
+			<span class = "fbutton midBox" style = "margin-left:60%;margin-top:-280px;position:absolute;" onclick = "update(\''.$postid.'\')"> Update </span>
 			<span class = "fbutton" style = "margin-left:67%;margin-top:-280px;position:absolute;" onclick = "deactivate(\''.$postid.'\')"> Delete </span>
 		';
 	}

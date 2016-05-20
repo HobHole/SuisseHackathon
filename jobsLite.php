@@ -14,7 +14,7 @@ echo '
 	</div>
 	
 	<div style="position: absolute; top: 600px; left: 100px; width: 400px; font-weight: bold; color: white;">
-	<p class="textPointer" onclick="subCategory(\'weekends\'); close_box();" id="weekends only"><font size="6">weekends only</font></p>
+	<p class="textPointer" onclick="subCategory(\'weekends\'); close_box();" id="weekends only"><font size="6">interns</font></p>
 	</div>';
 
 ?>
