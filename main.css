@@ -223,3 +223,33 @@ h1{
   a.hovertext:hover:after, a.hovertext:focus:after {
     opacity: 1.0;
   }
+  
+  
+  
+  a.hovertext1 {
+    position: relative;
+    width: 500px;
+    text-decoration: none !important;
+    text-align: center;
+  }
+  
+  a.hovertext1:after {
+    content: attr(title);
+	position:absolute;
+	margin-top: 90px;
+	margin-left:-270px;
+    padding: 0.5em 20px;
+    width: 100px;
+    background: rgba(0,0,0,0.8);
+    text-decoration: none !important;
+    color: #fff;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+  }
+  
+  a.hovertext1:hover:after, a.hovertext:focus:after {
+    opacity: 1.0;
+  }
