@@ -100,7 +100,6 @@
 
 				var parameters = "receiver=" + receiver + "&subject=" + subject + "&body=" + body;
 
-				alert(parameters);
 				request.open("POST","sendMail.php",false);
 				request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 				request.send(parameters);
@@ -155,12 +154,12 @@
 				request.open("POST", "loadSubCat.php", false);
 				request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 				request.send(parameters);
+				
 			}
 			
 			function setSubCat(value) {
 				document.getElementById("scat").value = value;
-			}
-			
+			}			
 
 		</script>
 	</head>
