@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	echo '<img onclick = "send(\'home\')"class = "logo" src="png/bulletinBoardLogo.png"/>';
+	echo '<img onclick = "send(\'home\')"class = "logo" src="png/suisseBoard.png"/>';
 	
 	$db = mysqli_connect("127.0.0.1","root","", "bulletinboard");
 	if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == 1) {
