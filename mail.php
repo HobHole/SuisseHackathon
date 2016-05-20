@@ -26,7 +26,7 @@
 		
 		';
 	
-	for ($i = 0; $i < 2; $i++) {
+	for ($i = 0; $i < count($resultSet); $i++) {
 		$messengerid = $resultSet[$i]['messenger'];
 		$receiverid = $resultSet[$i]['receiver'];
 		$subject = $resultSet[$i]['subject'];
