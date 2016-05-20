@@ -2,7 +2,7 @@
 echo '
 	<div class = "close"></div>
 	
-	<h1 align="center" style="padding:0; color:black;">Community</h1>
+	<h1 align="center" style="padding-bottom:20px; color:black; border-bottom-style: groove;">Community</h1>
 	
 	<div style="position: absolute; top: 200px; left: 130px; width: 400px; font-weight: bold; color: white;">
 	<p class="textPointer" onclick="subCategory(\'activities\'); close_box();" id="activities"><font size="6">activities</font></p>
