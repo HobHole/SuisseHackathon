@@ -96,6 +96,10 @@
 					<span> You can log in now! </span>
 					</br>
 					</br>';
-		}
+					//this is where emailing goes IF WE HAD IT
+					//$msg = "Hey man, it works!";
+					//mail("kevinsanchez1989@gmail.com", "Test", $msg);
+		}			
+					
 	}
 ?>

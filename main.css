@@ -34,6 +34,18 @@ h1{
 .logo:hover{
 	cursor:pointer;
 }
+
+.point{
+	margin:0;
+	padding:0;
+	color: #0000CC;
+}
+
+.point:hover{
+	
+	cursor:pointer;
+	color:orange;
+}
 .intro{
 	position: relative;
 	top: 50px;
