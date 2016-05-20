@@ -4,16 +4,14 @@
 	
 	$user = $_SESSION['users'];
 	
-	$cmd = "SELECT id FROM users WHERE name = '".$user."';";
+	$subCat = mysqli_real_escape_string($db,$_POST['subCat']);
+	
+	$cmd = "SELECT subcatid FROM subcategory WHERE name = '".$subCat."';";
 	$return = mysqli_query($db, $cmd);
 	$returnAss = mysqli_fetch_assoc($return);
-	$userid = $returnAss['id'];
+	$subcatid = $returnAss['id'];
 	
-	$cmd = "SELECT messenger, receiver, subject, body FROM mail 
-			WHERE messenger = ".$userid." 
-			OR receiver = ".$userid."
-			ORDER BY dateCreated";
-			
+	$cmd = "SELECT * FROM posts WHERE subcatid = '".$subcatid."' AND active = 1 ORDER BY postid;";
 	$return = mysqli_query($db, $cmd);
 
 	$resultSet = Array();
@@ -22,38 +20,34 @@
 	}
 	
 	echo '
-			<h1 align="center"; style="color:black;">Mail</h1>
+			<h1 align="center"; style="color:black;">'.$subcat.'</h1>
 		
 		';
 	
 	for ($i = 0; $i < 2; $i++) {
-		$messengerid = $resultSet[$i]['messenger'];
-		$receiverid = $resultSet[$i]['receiver'];
-		$subject = $resultSet[$i]['subject'];
-		$body = $resultSet[$i]['body'];
+		$creatorid = $resultSet[$i]['creatorid'];
+		$title = $resultSet[$i]['title'];
+		$description = $resultSet[$i]['description'];
+		$locationid = $resultSet[$i]['location'];
+		$price = $resultSet[$i]['price'];
 		
-		$message;
-		$show;
-		if ($messengerid == $userid) {
-			$message = $user.' : '.$body;
-		} else {
-			$cmd = "SELECT name FROM users WHERE name = '".$messengerid."';";
-			$return = mysqli_query($db, $cmd);
-			$returnAss = mysqli_fetch_assoc($return);
-			$name = $returnAss['name'];
-			
-			$message = $name.' : '.$body;
-		}
+		$cmd = "SELECT name FROM users WHERE id = '".$creatorid."';";
+		$return = mysqli_query($db, $cmd);
+		$returnAss = mysqli_fetch_assoc($return);
+		$name = $returnAss['name'];
 		
-		
-		
-		$show = $message;
+		$cmd = "SELECT name FROM locations WHERE locationid = '".$location."';";
+		$return = mysqli_query($db, $cmd);
+		$returnAss = mysqli_fetch_assoc($return);
+		$location = $returnAss['name'];
+				
 		echo '
 		
 			<div style = "width:50%; height: 80px;" align="center" id="mailSlots">
-				<span style = font-weight:8">RE: '.$subject.'</span>
+				<span style = font-weight:8; font-size:14pt;">'.$subject.' : '.$title.'</span>
 				<br>
-				<span>'.$show.'</span>
+				<span style = "font-size:12pt;">Location : '.$location.'    Price : $'.$price.'</span>
+				<span>'.$description.'</span>
 				<br>
 				<br>
 			</div>
