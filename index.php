@@ -159,7 +159,21 @@
 			
 			function setSubCat(value) {
 				document.getElementById("scat").value = value;
-			}			
+			}	
+
+			function subCategory(subCat) {
+				request.onreadystatechange = function() {
+						if (request.readyState == 4) {
+								document.getElementById("content").innerHTML=request.responseText;						
+						}
+				}
+
+				var parameters = "subCat=" + subCat;
+				request.open("POST","postPage.php",false);
+				request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+				request.send(parameters);
+				return false;
+            }
 
 		</script>
 	</head>

@@ -4,17 +4,16 @@ echo '
 	
 	<h1 align="center" style="padding:0; color:black;">Shopping</h1>
 	
-	
 	<div style="position: absolute; top: 200px; left: 130px; width: 400px; font-weight: bold; color: white;">
-	<p class="textPointer" onclick="send(\'register\')" ><font size="6">vehichles</font></p>
+	<p class="textPointer" onclick="subCategory(\'vehichles\')" id="vehichles"><font size="6">vehichles</font></p>
 	</div>
 	
 	<div style="position: absolute; top: 400px; left: 130px; width: 400px; font-weight: bold; color: white;">
-	<p class="textPointer" onclick="send(\'register\')" ><font size="6">appliances</font></p>
+	<p class="textPointer" onclick="subCategory(\'appliances\')" id="appliances"><font size="6">appliances</font></p>
 	</div>
 	
 	<div style="position: absolute; top: 600px; left: 100px; width: 400px; font-weight: bold; color: white;">
-	<p class="textPointer" onclick="send(\'register\')" ><font size="6">games/toys</font></p>
+	<p class="textPointer" onclick="subCategory(\'gamestoys\')" id="games/toys"><font size="6">games/toys</font></p>
 	</div>';
 
 ?>
