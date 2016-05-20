@@ -223,7 +223,7 @@
 				}
 				var parameters = "subcat=" + subcat;
 				
-				request.open("POST", "subject.php", false);
+				request.open("POST", "subscribe.php", false);
 				request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 				request.send(parameters);
 				return false;

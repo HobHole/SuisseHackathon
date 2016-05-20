@@ -37,7 +37,7 @@
 		if ($messengerid == $userid) {
 			$message = $user.' : '.$body;
 		} else {
-			$cmd = "SELECT name FROM users WHERE name = '".$messengerid."';";
+			$cmd = "SELECT name FROM users WHERE id = '".$messengerid."';";
 			$return = mysqli_query($db, $cmd);
 			$returnAss = mysqli_fetch_assoc($return);
 			$name = $returnAss['name'];
