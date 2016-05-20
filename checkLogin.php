@@ -8,11 +8,11 @@
 			<span style = "margin-top:-50px; margin-left:30%"> Welcome '.$_SESSION['users'].'!</span>
 			<div class = "dropdown" style = "floate:left;">
 				<img class = "navibutton" onmouseover = "rotateDIV()" id = "setting" src="png/setting.png"/>
-			<div class="dropdown-content" style="left:0;">
-				<a href="#">Link 1</a>
-				<a href="#">Link 2</a>
-				<a onclick = "logoff()">Log out</a>
-			  </div>
+				<div class="dropdown-content" style="left:0;">
+					<a href="#">Link 1</a>
+					<a href="#">Link 2</a>
+					<a onclick = "logoff()">Log out</a>
+				  </div>
 			</div>
 			<img onclick = "send(\'mail\')" class = "navibutton" id = "email" src = "png/mail.png"/>
 			<img onclick = "loadMidLite(\'createPost\')" class = "navibutton midBox" id = "newPost" src = "png/newPost.png"/>

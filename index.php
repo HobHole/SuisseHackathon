@@ -137,6 +137,10 @@
 				request.send();
 			}
 			
+			function setLocation(loc) {
+				document.getElementById("loc").value = loc;
+			}
+			
 
 		</script>
 	</head>
