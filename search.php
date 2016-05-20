@@ -2,16 +2,9 @@
 	session_start();
 	$db = mysqli_connect("127.0.0.1","root","", "bulletinboard");
 	
-	$user = $_SESSION['users'];
+	$item = mysqli_real_escape_string($db, $_POST['item']);
 	
-	$subCat = mysqli_real_escape_string($db,$_POST['subCat']);
-	
-	$cmd = "SELECT subcatid FROM subcategory WHERE name = '".$subCat."';";
-	$return = mysqli_query($db, $cmd);
-	$returnAss = mysqli_fetch_assoc($return);
-	$subcatid = $returnAss['subcatid'];
-	
-	$cmd = "SELECT * FROM posts WHERE subcatid = '".$subcatid."' AND active = 1 ORDER BY postid;";
+	$cmd = "SELECT * FROM posts WHERE active = 0 AND title LIKE '%".$item."%' OR description LIKE '%".$item."%' ORDER BY postid;";
 	$return = mysqli_query($db, $cmd);
 
 	$resultSet = Array();
@@ -20,8 +13,7 @@
 	}
 	
 	echo '
-			<h1 align="center"; style="color:black;">'.$subCat.'</h1>
-			<span class = "fbutton midBox" style = "margin-left: 1300px" onclick="subscribe(\''.$subCat.'\'"> Subscribe </span>
+			<h1 align="center"; style="color:black;">Search : '.$item.'</h1>
 		
 		';
 	
@@ -59,15 +51,15 @@
 			$dir = "uploads/";
 			$filename = $dir.$image1;
 			if (file_exists($filename)) {
-				echo '<img style = "height:150px; width:150px;" src = "'.$filename.'"/>';
+				echo '<img style = "height:100px; width:100px;" src = "'.$filename.'"/>';
 			}
 			$filename = $dir.$image2;
 			if (file_exists($filename)) {
-				echo '<img  style = "height:150px; width:150px;"src = "'.$filename.'"/>';
+				echo '<img  style = "height:100px; width:100px;"src = "'.$filename.'"/>';
 			}
 			$filename = $dir.$image3;
 			if (file_exists($filename)) {
-				echo '<img  style = "height:150px; width:150px;"src = "'.$filename.'"/>';
+				echo '<img  style = "height:100px; width:100px;"src = "'.$filename.'"/>';
 			}
 			echo'
 			</div>

@@ -197,9 +197,38 @@
 				request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 				request.send(parameters);
 				return false;
+			}
+			
+			function searchItem() {
+				request.onreadystatechange = function() {
+					if (request.readyState == 4 && request.status == 200) {
+						document.getElementById("content").innerHTML=request.responseText;
+					}
+				}
+				var item = document.getElementById("item").value;
+				var parameters = "item=" + item;
+				
+				request.open("POST", "search.php", false);
+				request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+				request.send(parameters);
+				return false;
+			}
+			
+			function subscribe(subcat) {
+				
+				request.onreadystatechange = function() {
+					if (request.readyState == 4 && request.status == 200) {
+						document.getElementById("midBox").innerHTML=request.responseText;
+					}
+				}
+				var parameters = "subcat=" + subcat;
+				
+				request.open("POST", "subject.php", false);
+				request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+				request.send(parameters);
+				return false;
 				
 			}
-
 		</script>
 	</head>
 	<body>
