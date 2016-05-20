@@ -18,11 +18,12 @@
 	}
 	
 	echo '
-			<h1 align="center"; style="color:black;">'.$subCat.'</h1>
+			<h1 align="center"; style="color:black;"> Posts Made</h1>
 		
 		';
 	
 	for ($i = 0; $i < count($resultSet); $i++) {
+		$postid = $resultSet[$i]['postid'];
 		$creatorid = $resultSet[$i]['creatorid'];
 		$title = $resultSet[$i]['title'];
 		$description = $resultSet[$i]['description'];
@@ -68,6 +69,7 @@
 			}
 			echo'
 			</div>
+			<span class = "fbutton" style = "margin-left:67%;margin-top:-280px;position:absolute;" onclick = "deactivate(\''.$postid.'\')"> Delete </span>
 		';
 	}
 

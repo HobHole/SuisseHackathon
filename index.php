@@ -175,6 +175,20 @@
 				request.send(parameters);
 				return false;
             }
+			
+			function deactivate(postid) {
+				request.onreadystatechange = function() {
+					if (request.readyState == 4 && request.status == 200) {
+						document.getElementById("content").innerHTML=request.responseText;
+					}
+				}
+				var parameters = "postid=" + postid;
+				request.open("POST","deactivatePost.php",false);
+				request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+				request.send(parameters);
+				send("viewPostsMade");
+				return false;
+			}
 
 		</script>
 	</head>
