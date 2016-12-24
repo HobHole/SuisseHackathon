@@ -1,7 +1,9 @@
 README.txt
 
 The 2016 Credit Suisse Hackathon - SuisseBoard.
-Task - A 24 hour competition to complete a craigslist-esque website specifically made for the Credit Suisse employees. The site is mostly complete with a register and login system. Posting entries work in specific topics as well. The mail server and subscription are not working.
+Task - A 24 hour competition to complete a craigslist-esque website specifically made for the Credit Suisse employees. 
+The site is mostly complete with a register and login system. Posting entries work in specific topics as well. 
+The mail server and subscription are not working.
 
 jqueryEffects.js - Holds javascript for graphical purposes
 main.css - Holds all the css
